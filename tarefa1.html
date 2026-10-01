@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 18px 0;
+        }
+
+        #formulario {
+            width: 760px;
+            margin: 0 auto;
+            border: 6px solid #a52a2a;
+            padding: 7px 17px 8px 17px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #a52a2a;
+            font-size: 42px;
+            text-align: center;
+            margin: 0 0 7px 0;
+        }
+
+        .linha {
+            display: flex;
+            align-items: center;
+            margin-bottom: 11px;
+        }
+
+        .rotulo {
+            width: 325px;
+            color: #cd853f;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .campo {
+            width: 420px;
+            height: 36px;
+            box-sizing: border-box;
+            color: #ff6347;
+            font-family: "Courier New", monospace;
+            font-size: 21px;
+            font-weight: 600;
+            padding: 3px 6px;
+        }
+
+        .campo::placeholder {
+            color: #ff6347;
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        #nascimento {
+            width: 212px;
+        }
+
+        .grupo-tabela {
+            align-items: center;
+        }
+
+        table {
+            width: 395px;
+            border: 5px solid #a52a2a;
+            border-collapse: collapse;
+            color: #008b8b;
+            font-family: Arial, sans-serif;
+            font-size: 22px;
+        }
+
+        th {
+            background-color: #d3d3d3;
+            color: #006400;
+            text-align: left;
+            padding: 4px 18px;
+        }
+
+        td {
+            padding: 4px 18px;
+            font-weight: 600;
+        }
+
+        .titulo-opcao {
+            color: #cd853f;
+            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            margin: 10px 0 6px 0;
+        }
+
+        .opcoes {
+            color: #ff6347;
+            font-family: Arial, sans-serif;
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 1.25;
+        }
+
+        .opcoes label {
+            display: block;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            vertical-align: -2px;
+            margin: 0 8px 0 5px;
+        }
+
+        #areas {
+            color: #ff6347;
+            font-family: "Courier New", monospace;
+            font-size: 21px;
+            font-weight: 600;
+            width: 178px;
+        }
+
+        #comentarios {
+            width: 580px;
+            height: 165px;
+            color: #ff6347;
+            font-family: "Courier New", monospace;
+            font-size: 21px;
+            font-weight: 600;
+            box-sizing: border-box;
+            padding: 4px;
+        }
+
+        #comentarios::placeholder {
+            color: #ff6347;
+            opacity: 1;
+            font-weight: 600;
+        }
+
+        .botoes {
+            width: 440px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+
+        button {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 2px 10px;
+        }
+
+        #enviar {
+            color: #006400;
+        }
+
+        #limpar {
+            color: #a52a2a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="formulario">
+
+        <h1>Formulário</h1>
+
+        <div class="linha">
+            <label class="rotulo" for="nome">Nome completo:</label>
+            <input class="campo" type="text" id="nome" placeholder="Exemplo de Nome">
+        </div>
+
+        <div class="linha">
+            <label class="rotulo" for="email">E-mail:</label>
+            <input class="campo" type="text" id="email" placeholder="exemplo@mail.com">
+        </div>
+
+        <div class="linha">
+            <label class="rotulo" for="senha">Senha:</label>
+            <input class="campo" type="password" id="senha" placeholder="••••••••••••">
+        </div>
+
+        <div class="linha">
+            <label class="rotulo" for="telefone">Telefone para contato:</label>
+            <input class="campo" type="text" id="telefone" maxlength="11" placeholder="19999900000">
+        </div>
+
+        <div class="linha">
+            <label class="rotulo" for="nascimento">Data de nascimento:</label>
+            <input class="campo" type="date" id="nascimento">
+        </div>
+
+        <div class="linha grupo-tabela">
+            <span class="rotulo">Integrantes do grupo:</span>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>RA</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>202010376</td>
+                        <td>Nicolas Camargo Cavagioni</td>
+                    </tr>
+
+                    <tr>
+                        <td>202210495</td>
+                        <td>Vitor Augusto Costa Felippe</td>
+                    </tr>
+
+                    <tr>
+                        <td>202210325</td>
+                        <td>Vitor Barion</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="titulo-opcao">
+            Qual meio prefere ser contatado?
+        </div>
+
+        <div class="opcoes">
+            <label>
+                <input type="radio" name="contato" value="E-mail">
+                E-mail
+            </label>
+
+            <label>
+                <input type="radio" name="contato" value="Celular">
+                Celular
+            </label>
+
+            <label>
+                <input type="radio" name="contato" value="WhatsApp">
+                WhatsApp
+            </label>
+        </div>
+
+        <div class="titulo-opcao">
+            Selecione as linguagens que já estudou:
+        </div>
+
+        <div class="opcoes">
+            <label>
+                <input type="checkbox" name="linguagem" value="C">
+                C
+            </label>
+
+            <label>
+                <input type="checkbox" name="linguagem" value="C++">
+                C++
+            </label>
+
+            <label>
+                <input type="checkbox" name="linguagem" value="HTML">
+                HTML
+            </label>
+
+            <label>
+                <input type="checkbox" name="linguagem" value="Java">
+                Java
+            </label>
+
+            <label>
+                <input type="checkbox" name="linguagem" value="Javascript">
+                Javascript
+            </label>
+
+            <label>
+                <input type="checkbox" name="linguagem" value="Python">
+                Python
+            </label>
+        </div>
+
+        <div class="titulo-opcao">
+            Áreas de interesse:
+        </div>
+
+        <select id="areas" multiple size="4">
+            <option value="Programação">Programação</option>
+            <option value="Matemática">Matemática</option>
+            <option value="Gestão">Gestão</option>
+            <option value="Redes">Redes</option>
+        </select>
+
+        <div class="titulo-opcao">
+            Gostaria de fazer comentários?
+        </div>
+
+        <textarea id="comentarios" placeholder="Estes são os meus comentários..."></textarea>
+
+        <div class="botoes">
+            <button type="button" id="enviar">Enviar</button>
+            <button type="button" id="limpar">Limpar</button>
+        </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        function limparCampos() {
+            document.getElementById("formulario").reset();
+        }
+
+        $(document).ready(function () {
+
+            $("#limpar").click(function () {
+                limparCampos();
+            });
+
+            $("#enviar").click(function () {
+
+                var nome = $("#nome").val().trim();
+                var email = $("#email").val().trim();
+                var senha = $("#senha").val();
+                var telefone = $("#telefone").val().trim();
+                var nascimento = $("#nascimento").val();
+                var contato = $("input[name='contato']:checked").val();
+                var areas = $("#areas").val();
+                var comentarios = $("#comentarios").val().trim();
+
+                var linguagens = [];
+
+                $("input[name='linguagem']:checked").each(function () {
+                    linguagens.push($(this).val());
+                });
+
+                if (
+                    nome == "" ||
+                    email == "" ||
+                    senha == "" ||
+                    telefone == "" ||
+                    nascimento == "" ||
+                    !contato ||
+                    linguagens.length == 0 ||
+                    !areas ||
+                    areas.length == 0 ||
+                    comentarios == ""
+                ) {
+                    alert("Preencha ou selecione todos os campos.");
+                    return;
+                }
+
+                var testeNome = /^[A-Za-zÀ-ÿ]+(\s+[A-Za-zÀ-ÿ]+)+$/;
+
+                if (!testeNome.test(nome)) {
+                    alert("O nome deve ter pelo menos duas palavras e não pode ter números.");
+                    return;
+                }
+
+                var testeEmail = /^[A-Za-z]+@[A-Za-z]+(\.[A-Za-z]+)+$/;
+
+                if (!testeEmail.test(email)) {
+                    alert("Digite um e-mail válido.");
+                    return;
+                }
+
+                var temNumero = /[0-9]/.test(senha);
+                var temEspecial = /[^A-Za-z0-9]/.test(senha);
+                var temMaiuscula = /[A-Z]/.test(senha);
+
+                if (
+                    senha.length < 12 ||
+                    !temNumero ||
+                    !temEspecial ||
+                    !temMaiuscula
+                ) {
+                    alert("A senha deve ter no mínimo 12 caracteres, número, caractere especial e letra maiúscula.");
+                    return;
+                }
+
+                if (!/^\d{10,11}$/.test(telefone)) {
+                    alert("O telefone deve conter somente 10 ou 11 números, incluindo o DDD.");
+                    return;
+                }
+
+                if (
+                    nascimento < "2000-01-01" ||
+                    nascimento > "2007-12-31"
+                ) {
+                    alert("A data deve estar entre 01/01/2000 e 31/12/2007.");
+                    return;
+                }
+
+                var dados = {
+                    nome: nome,
+                    email: email,
+                    senha: senha,
+                    telefone: telefone,
+                    nascimento: nascimento,
+                    contato: contato,
+                    linguagens: linguagens,
+                    areas: areas,
+                    comentarios: comentarios
+                };
+
+                console.log("Dados enviados:");
+                console.log(JSON.stringify(dados));
+
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=UTF-8",
+                    data: JSON.stringify(dados),
+
+                    success: function () {
+                        alert("Formulário enviado com sucesso!");
+                        limparCampos();
+                    },
+
+                    error: function () {
+                        alert("Erro ao enviar o formulário.");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
